@@ -20,11 +20,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+  width: 100%;
 }
 
 .leftGroup {
   flex: 1;
   padding: 0 20px;
+  display: flex;
+  align-items: center;
 }
 
 .centerGroup {
@@ -132,7 +135,63 @@
   background-color: #1f4204;
 }
 
+/* ✅ Hamburger and Mobile Styles */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #333;
+  margin-left: auto;
+}
+
+.mobileMenu {
+  display: none;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  animation: slideDown 0.3s ease-in-out;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.desktopMenu {
+  display: flex;
+  width: 100%;
+}
+
 /* ✅ RESPONSIVE STYLES */
+@media (min-width: 1300px) {
+  .navContent {
+    flex-wrap: nowrap;
+  }
+
+  .leftGroup {
+    justify-content: flex-start;
+  }
+
+  .centerGroup {
+    justify-content: center;
+  }
+
+  .rightGroup {
+    justify-content: flex-end;
+  }
+}
+
 @media (max-width: 1024px) {
   .centerGroup {
     flex: 100%;
@@ -149,6 +208,19 @@
 }
 
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    margin-left: 14rem;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+
   .navContent {
     flex-direction: column;
     align-items: flex-start;
@@ -186,11 +258,21 @@
   }
 
   .navItem {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .categoryButton,
+  .loginButton {
+    width: 100%;
+    text-align: left;
   }
 }
 
 @media (max-width: 480px) {
+  .hamburger {
+    display: flex;
+    margin-left: 6rem;
+  }
   .searchWrapper {
     max-width: 100%;
   }
