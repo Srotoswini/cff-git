@@ -1,93 +1,194 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 6rem !important;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem !important;
+}
+
+@media (min-width: 769px) and (max-width: 1064px) {
+  .container {
+    margin-top: 8rem !important;
   }
-  
-  .heroBanner {
-    background: url('/hero-bg1.png') no-repeat center center/cover;
-    color: white;
-    padding: 100px 40px;
+}
+
+.heroBanner {
+  background: url('/hero-bg1.png') no-repeat center center/cover;
+  color: white;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.heroBanner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.heroBanner p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.main {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.sidebar {
+  min-width: 200px;
+  border-right: 1px solid #eee;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.sidebar button:hover,
+.sidebar .active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.productGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.price {
+  color: green;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1064px) {
+  .heroBanner h1 {
+    font-size: 2.3rem;
+  }
+  .heroBanner p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
     text-align: center;
   }
-  
-  .heroBanner h1 {
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  
-  .heroBanner p {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    font-weight: 400;
-  }
-  
-  .main {
-    display: flex;
-    padding: 2rem;
-    gap: 2rem;
-  }
-  
-  .sidebar {
-    min-width: 200px;
-    border-right: 1px solid #eee;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-  }
-  
+
   .sidebar h3 {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-  }
-  
-  .sidebar button {
-    background: none;
-    border: none;
-    text-align: left;
-    padding: 0.5rem 0;
     font-size: 1rem;
-    cursor: pointer;
-    color: #333;
+    margin-bottom: 0.5rem;
   }
-  
+
+  .sidebar button {
+    display: inline-block;
+    margin: 0.25rem 0.5rem;
+    font-size: 0.95rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: all 0.2s ease;
+  }
+
   .sidebar button:hover,
   .sidebar .active {
-    font-weight: bold;
+    background-color: #eaf4ff;
     color: #007bff;
+    font-weight: 600;
   }
-  
+
   .productGrid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .card {
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-    transition: transform 0.2s ease;
-    background: white;
-  }
-  
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  .image {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 6px;
+    padding: 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    justify-items: center;
   }
-  
-  .price {
-    color: green;
-    font-weight: bold;
-    margin-top: 0.5rem;
+
+  .card {
+    max-width: 240px;
+    width: 100%;
   }
-  
+
+  .heroBanner {
+    padding: 60px 20px;
+  }
+
+  .heroBanner h1 {
+    font-size: 1.8rem;
+  }
+
+  .heroBanner p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 0 1rem 1rem;
+  }
+
+  .sidebar button {
+    width: 100%;
+    text-align: left;
+    margin: 0.3rem 0;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .heroBanner h1 {
+    font-size: 1.5rem;
+  }
+
+  .heroBanner p {
+    font-size: 0.9rem;
+  }
+}

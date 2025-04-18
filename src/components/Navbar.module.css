@@ -210,7 +210,10 @@
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
-    margin-left: 14rem;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .desktopMenu {
@@ -271,8 +274,10 @@
 @media (max-width: 480px) {
   .hamburger {
     display: flex;
-    margin-left: 6rem;
+    margin-left: auto;
+    align-self: flex-end;
   }
+  
   .searchWrapper {
     max-width: 100%;
   }

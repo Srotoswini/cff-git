@@ -6,16 +6,22 @@
   height: 400px;
   display: flex;
   align-items: flex-start;
-
   justify-content: start;
   padding: 0 5%;
   color: #ffffff;
   position: relative;
   overflow: hidden;
   transition: background-image 0.6s ease-in-out;
+  flex-direction: column;
+  text-align: left;
 }
 
-/* Arrows (hidden until hover) */
+@media (min-width: 769px) and (max-width: 1064px) {
+  .hero {
+    margin-top: 8rem !important;
+  }
+}
+
 .arrowLeft,
 .arrowRight {
   position: absolute;
@@ -45,7 +51,6 @@
   opacity: 1;
 }
 
-/* Text styles remain the same */
 .hero h1 {
   font-size: 2.5rem;
   line-height: 1.3;
@@ -88,4 +93,89 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    height: 380px;
+    padding: 0 4%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .ctaButton {
+    font-size: 0.95rem;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 360px;
+    padding: 0 3%;
+    align-items: flex-start;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+    margin-top: 3rem !important;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .ctaButton {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .supportLine {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 320px;
+    padding: 0 5%;
+    text-align: left;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .supportLine {
+    font-size: 10px;
+  }
 }
