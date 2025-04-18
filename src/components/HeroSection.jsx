@@ -17,7 +17,8 @@ export default function HeroSection() {
           to Your Doorstep
         </>
       ),
-      subheading: "Experience the goodness of freshness. Either it's fresh or it's free!",
+      subheading:
+        "Experience the goodness of freshness. Either it's fresh or it's free!",
     },
     "hero-bg2.png": {
       heading: (
@@ -35,7 +36,8 @@ export default function HeroSection() {
           Fresh to Your Kitchen
         </>
       ),
-      subheading: "Hand-selected, tender, and 100% fresh. Taste the richness with every bite.",
+      subheading:
+        "Hand-selected, tender, and 100% fresh. Taste the richness with every bite.",
     },
     "hero-bg4.png": {
       heading: (
@@ -59,11 +61,17 @@ export default function HeroSection() {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  useEffect(() => { 
+  useEffect(() => {
     const interval = setInterval(goNext, 6000); // 🔁 6 seconds
     return () => clearInterval(interval);
   }, []);
-  
+
+  const handleScrollToOffers = () => {
+    const target = document.getElementById("exclusive-offers");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div
@@ -80,7 +88,9 @@ export default function HeroSection() {
       <div>
         <h1>{selectedContent.heading}</h1>
         <p>{selectedContent.subheading}</p>
-        <button className={styles.ctaButton}>Shop Now</button>
+        <button className={styles.ctaButton} onClick={handleScrollToOffers}>
+          Shop Now
+        </button>
         <p className={styles.supportLine}>
           *Got a question? We're here to help — +91 91239-29282
         </p>

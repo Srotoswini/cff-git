@@ -7,7 +7,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function ProductSection({ title, viewAllLink, products = [] }) {
   const scrollRef = useRef(null);
-  const [quantities, setQuantities] = useState({}); // 🆕 Track quantity per product
+  const [quantities, setQuantities] = useState({});
 
   const scroll = (direction) => {
     const container = scrollRef.current;
@@ -44,7 +44,7 @@ export default function ProductSection({ title, viewAllLink, products = [] }) {
   };
 
   return (
-    <section className={styles.section}>
+    <section id="exclusive-offers" className={styles.section}>
       <div className={styles.sectionHeader}>
         <h2 className={styles.sectionTitle}>{title}</h2>
         <Link href={viewAllLink} className={styles.viewAll}>
@@ -67,43 +67,42 @@ export default function ProductSection({ title, viewAllLink, products = [] }) {
 
               return (
                 <div key={product.id} className={styles.productCard}>
-  <Link
-    href={{
-      pathname: "/product-details",
-      query: { data: JSON.stringify(product) },
-    }}
-  >
-    <img
-      src={product.image}
-      alt={product.name}
-      className={styles.productImage}
-      style={{ cursor: "pointer" }}
-    />
-  </Link>
+                  <Link
+                    href={{
+                      pathname: "/product-details",
+                      query: { data: JSON.stringify(product) },
+                    }}
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className={styles.productImage}
+                      style={{ cursor: "pointer" }}
+                    />
+                  </Link>
 
-  <h3 className={styles.productName}>{product.name}</h3>
+                  <h3 className={styles.productName}>{product.name}</h3>
 
-  <div className={styles.priceSection}>
-    <span className={styles.price}>{product.price}</span>
-    <span className={styles.originalPrice}>{product.originalPrice}</span>
-  </div>
+                  <div className={styles.priceSection}>
+                    <span className={styles.price}>{product.price}</span>
+                    <span className={styles.originalPrice}>{product.originalPrice}</span>
+                  </div>
 
-  {quantity === 0 ? (
-    <button
-      className={styles.addToCart}
-      onClick={() => handleAddToCart(product.id)}
-    >
-      Add to Cart
-    </button>
-  ) : (
-    <div className={styles.quantityControl}>
-      <button onClick={() => decrement(product.id)}>-</button>
-      <span>{quantity}</span>
-      <button onClick={() => increment(product.id)}>+</button>
-    </div>
-  )}
-</div>
-
+                  {quantity === 0 ? (
+                    <button
+                      className={styles.addToCart}
+                      onClick={() => handleAddToCart(product.id)}
+                    >
+                      Add to Cart
+                    </button>
+                  ) : (
+                    <div className={styles.quantityControl}>
+                      <button onClick={() => decrement(product.id)}>-</button>
+                      <span>{quantity}</span>
+                      <button onClick={() => increment(product.id)}>+</button>
+                    </div>
+                  )}
+                </div>
               );
             })
           ) : (
