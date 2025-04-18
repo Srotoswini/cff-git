@@ -1,5 +1,6 @@
 // app/product-details/page.js
-'use client';
+
+export const dynamic = 'force-dynamic'; // Ensures this page is not statically prerendered
 
 import { Suspense } from 'react';
 import ProductDetailsWrapper from './ProductDetailsWrapper';
