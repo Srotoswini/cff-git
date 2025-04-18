@@ -74,12 +74,33 @@ export default function ProductDetails({ product }) {
         <button className={styles.cartButton} onClick={handleAddToCart}>
           Add to Cart
         </button>
-
-        <div className={styles.benefits}>
-          <p>✅ 100% Fresh, never frozen</p>
-          <p>✅ Cleaned & cut on order</p>
-          <p>✅ 30-minute delivery slots</p>
-        </div>
+            {/* Nutrition Info */}
+{product.nutrition && (
+  <div className={styles.nutritionBox}>
+    <h4>
+      Nutrition Info <span>(per 100g)</span>
+    </h4>
+    <ul>
+      <li>
+        <span>Calories</span>
+        <strong>{product.nutrition.calories}</strong>
+      </li>
+      <li>
+        <span>Protein</span>
+        <strong>{product.nutrition.protein}g</strong>
+      </li>
+      <li>
+        <span>Fat</span>
+        <strong>{product.nutrition.fat}g</strong>
+      </li>
+      <li>
+        <span>Carbs</span>
+        <strong>{product.nutrition.carbs}g</strong>
+      </li>
+    </ul>
+  </div>
+)}
+    
       </div>
     </div>
   );
