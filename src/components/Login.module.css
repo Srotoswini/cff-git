@@ -116,7 +116,7 @@
 
 @media (max-width: 768px) {
   .page {
-    margin-top: 2rem;
+    margin-top: 4rem;
     flex-direction: column;
   }
 
