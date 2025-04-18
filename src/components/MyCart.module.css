@@ -1,0 +1,217 @@
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    margin-top: 6rem;
+    font: 1em sans-serif;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1a1a1a;
+  }
+  
+  .empty {
+    text-align: center;
+    color: #777;
+    font-size: 1.2rem;
+  }
+  
+  .cartList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .cartItem {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    gap: 1rem;
+  }
+  
+  .image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .details {
+    flex: 1;
+  }
+  
+  .qty {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 0.25rem;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #e53935;
+    margin-top: 0.5rem;
+  }
+  
+  .removeBtn {
+    background: none;
+    border: none;
+    color: #e53935;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .removeBtn:hover {
+    transform: scale(1.2);
+  }
+  
+  .summary {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 1.2rem;
+  }
+  
+  .checkoutBtn {
+    margin-top: 1rem;
+    padding: 12px 24px;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .checkoutBtn:hover {
+    background-color: #2e7d32;
+  }
+  
+  .paymentSection {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  
+  .paymentOptions {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .paymentOptions label {
+    cursor: pointer;
+  }
+  
+  .orderSummary {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fafafa;
+  }
+  
+  .summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  .totalRow {
+    font-size: 1.1rem;
+    color: #000;
+  }
+
+  .qtyControl {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .qtyControl button {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+  }
+  
+  .qtyControl button:hover {
+    background-color: #ddd;
+  }
+  
+  .qtyControl span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .deliverySlot {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  
+  .deliverySlot h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .alertBox {
+    background-color: #fff0f0;
+    color: #b00020;
+    border-left: 4px solid #ff4d4f;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .deliverySlot label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  .select {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: border 0.2s ease-in-out;
+  }
+  
+  .select:focus {
+    border-color: #0070f3;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+  }
+  

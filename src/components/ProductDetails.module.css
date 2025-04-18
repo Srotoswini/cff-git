@@ -1,0 +1,221 @@
+.container {
+    margin-top: 6rem !important;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  
+  .gallery {
+    flex: 1;
+    min-width: 320px;
+  }
+  
+  .mainImage {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .thumbnailRow {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border 0.2s ease;
+  }
+  
+  .thumbnail:hover {
+    border-color: #007bff;
+  }
+  
+  .info {
+    flex: 1;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+  
+  .price {
+    color: green;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .desc {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .section {
+    margin-bottom: 1.2rem;
+  }
+  
+  .section span {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .options {
+    display: flex;
+    gap: 10px;
+    margin-top: 0.5rem;
+  }
+  
+  .option {
+    border: 1px solid #ccc;
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: #f9f9f9;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  
+  .option.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .dropdown {
+    margin-top: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+  }
+  
+  .quantityRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 1.2rem 0;
+  }
+  
+  .quantityRow button {
+    background: #e0e0e0;
+    border: none;
+    padding: 6px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .quantityRow button:hover {
+    background-color: #ccc;
+  }
+  
+  .quantityRow span {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .cartButton {
+    padding: 12px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .cartButton:hover {
+    background-color: #25672b;
+  }
+  
+  .benefits {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .benefits p {
+    margin-bottom: 0.4rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .mainImage {
+      max-width: 100%;
+    }
+  
+    .info {
+      margin-top: 2rem;
+    }
+  }
+  .nutritionBox {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .nutritionBox h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+  
+  .nutritionBox h4 span {
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #777;
+  }
+  
+  .nutritionBox ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nutritionBox li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px dashed #ddd;
+  }
+  
+  .nutritionBox li:last-child {
+    border-bottom: none;
+  }
+  
+  .nutritionBox li span {
+    color: #555;
+  }
+  
+  .nutritionBox li strong {
+    font-weight: 600;
+    color: #000;
+  }
+  
