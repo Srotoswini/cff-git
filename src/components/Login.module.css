@@ -105,6 +105,10 @@
 
 /* ✅ RESPONSIVE STYLES */
 @media (max-width: 1024px) {
+  .page {
+    margin-top: 3rem;
+  }
+
   .welcome {
     font-size: 1.6rem;
   }
@@ -112,6 +116,7 @@
 
 @media (max-width: 768px) {
   .page {
+    margin-top: 2rem;
     flex-direction: column;
   }
 
@@ -140,6 +145,10 @@
 }
 
 @media (max-width: 480px) {
+  .page {
+    margin-top: 1.5rem;
+  }
+
   .welcome {
     font-size: 1.3rem;
   }
