@@ -98,7 +98,7 @@ const MyOrders = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>🧾 My Orders</h1>
+      <h1 className={styles.heading}>    </h1>
       <div className={styles.orderList}>
         {orders.map((order, idx) => (
           <div key={order.id} className={styles.orderCard}>
