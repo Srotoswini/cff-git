@@ -1,0 +1,123 @@
+.footer {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+/* Top Info Strip */
+.topStrip {
+  background-color: #fff7ed;
+  color: #b45309;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+
+/* Middle Strip */
+.middleStrip {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.support {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.phoneIcon {
+  font-size: 22px;
+  background-color: #fff;
+  color: #1b3b2f;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.support p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.appPromo {
+  text-align: center;
+  color: #fff;
+}
+
+.appPromo p {
+  font-size: 12px;
+  margin: 4px 0;
+  color: #bbb;
+}
+
+.appButtons img {
+  height: 36px;
+  margin: 6px;
+  border-radius: 8px;
+}
+
+/* Social Icons */
+.socials {
+  display: flex;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.socials svg {
+  background: #fff;
+  color: #1b3b2f;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+.socials svg:hover {
+  transform: scale(1.1);
+}
+
+/* Bottom Legal Bar */
+.bottomStrip {
+  background-color: #111827;
+  color: #9ca3af;
+  font-size: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.links a {
+  color: #a8a7a7;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.whatsappIcon {
+  color: #25D366;
+  ;
+  transition: transform 0.2s;
+  width: fit-content;
+}
+
+.whatsappIcon:hover {
+  transform: scale(1.1);
+}
